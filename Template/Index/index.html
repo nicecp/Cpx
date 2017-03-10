@@ -1,0 +1,14 @@
+<div id="body">
+	<h1 id="welcome">{{$explain}}</h1>
+	测试内容
+	<table>
+		<tr><th>ID</th><th>名字</th><th>联系方式</th></tr>
+		{{foreach $list}}
+		<tr>
+			<td class="item">{{$value['id']}}</td>
+			<td class="item">{{$value['name']}}</td>
+			<td class="item">{{$value['phone']}}</td>
+		</tr>
+		{{/foreach}}
+	</table>
+</div>

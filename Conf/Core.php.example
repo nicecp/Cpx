@@ -1,0 +1,76 @@
+<?php
+namespace Conf;
+
+/**
+ * 配置
+ */
+class Core {
+	/**
+	 * 应用名称
+	 *
+	 * @var sring
+	 */
+	public $appName = 'Cpx[Internal Test]';
+
+	/**
+	 * 监听的端口
+	 *
+	 * @var int
+	 */
+	public $port = 9090;
+
+	/**
+	 * 进程数量
+	 *
+	 * @var int
+	 */
+	public $count = 3;
+
+	/**
+	 * 监听的地址
+	 *
+	 * @var array [address => webroot]
+	 */
+	public $listen = array(
+		'www.cpx.com' => '/',
+		'cpx.com' => '/'
+		);
+
+	/**
+	 * Log
+	 *
+	 * @var string
+	 */
+	public $log = 'cpx.log';
+
+	/**
+	 * 主进程PID文件
+	 *
+	 * @var string
+	 */
+	public $masterPidFile = 'Bin/cpx.pid';
+
+	/**
+	 * 模板文件路径
+	 *
+	 * @var string
+	 */
+	public $template = 'Template';
+
+	/**
+	 * 资源文件路径
+	 *
+	 * @var string
+	 */
+	public $resource = 'Resource';
+
+	/**
+	 * 缓存配置
+	 *
+	 * @var array
+	 */
+	public $cache = array(
+		'switch' => false, // 是否开启缓存
+		'path' => '/Users/cp/tmp', //缓存文件目录，仅当开启缓存时有效
+		);
+}

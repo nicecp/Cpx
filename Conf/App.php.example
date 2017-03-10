@@ -1,0 +1,23 @@
+<?php
+namespace Conf;
+
+/**
+ * 应用配置
+ */
+class App {
+	/**
+	 * 数据库配置
+	 *
+	 * @var array
+	 */
+	public $db = array(
+		// 写库
+		'write' => array('host' => '127.0.0.1', 'port' => '3306', 'user' => 'root', 'password' => 'root', 'dbname' => 'cpx'),
+		// 读库
+		'read'  => array(
+			'inst1' => array('host' => '127.0.0.1', 'port' => '3306', 'user' => 'root', 'password' => 'root', 'dbname' => 'cpx'),
+			'inst2' => array('host' => '127.0.0.1', 'port' => '3306', 'user' => 'root', 'password' => 'root', 'dbname' => 'cpx'),
+			)
+		);
+
+}

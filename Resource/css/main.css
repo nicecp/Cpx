@@ -1,0 +1,21 @@
+#body {
+	margin: auto;
+	text-align: center;
+}
+#welcome {
+	color: green;
+}
+#body > table {
+	width: 300px;
+	margin: auto;
+}
+.item {
+	font-family: monospace;
+}
+.item:nth-child(2) {
+	color: red;
+}
+#footer {
+	text-align: center;
+	color: #ff9400;
+}
