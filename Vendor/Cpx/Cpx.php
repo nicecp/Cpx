@@ -17,7 +17,9 @@ class Cpx extends BaseFrame {
 	 */
 	public static function run()
 	{
-		self::init();
+		// 初始化配置
+		self::config();
+		// 初始化worker
 		self::initWorker();
 	}
 
@@ -26,7 +28,7 @@ class Cpx extends BaseFrame {
 	 *
 	 * @return void
 	 */
-	protected static function init()
+	protected static function config()
 	{
 		Config::setNameSpace('Conf');
 		Render::setTemplate(Config::get('Core.template'));
@@ -54,7 +56,6 @@ class Cpx extends BaseFrame {
 		foreach(Config::get('Core.listen') as $domain => $webroot) {
 			$webserver->addRoot($domain, realpath(__DIR__.'/../../').$webroot);
 		}
-
 		// 进程数量
 		$webserver->count = Config::get('Core.count');
 
