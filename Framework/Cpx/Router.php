@@ -1,10 +1,11 @@
 <?php
-namespace Cpx;
+namespace Framework\Cpx;
 
+use Framework\Cpx\Base;
 /**
  * 路由器
  */
-class Router extends BaseFrame {
+class Router extends Base {
 
 	/**
 	 * 路由到指定控制器
@@ -36,7 +37,7 @@ class Router extends BaseFrame {
 				$className = '\\Controller\\' . implode("\\", $spices);
 				break;
 		}
-		
+
 		// 路由至控制器
 		if (class_exists($className) || method_exists($className, $method)) {
 			$controller = new $className($request, $className, $method);

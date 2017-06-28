@@ -1,16 +1,18 @@
 <?php
-namespace Cpx;
+namespace Framework;
 
-use Cpx\Config;
-use Cpx\Render;
-use Cpx\Cache;
+use Framework\Common\Config;
+use Framework\Cpx\Base;
+use Framework\Cpx\Db;
+use Framework\Cpx\Render;
+use Framework\Cpx\Cache;
 use Workerman\Worker;
 use Workerman\WebServer;
 
 /*
- * Yi框架
+ * 框架
  */
-class Cpx extends BaseFrame {
+class Service extends Base {
 	/**
 	 * 启动入口
 	 *
@@ -54,7 +56,7 @@ class Cpx extends BaseFrame {
 
 		// 监听多个域名，类似Nginx的root配置
 		foreach(Config::get('Core.listen') as $domain => $webroot) {
-			$webserver->addRoot($domain, realpath(__DIR__.'/../../').$webroot);
+			$webserver->addRoot($domain, realpath(__DIR__.'/../').$webroot);
 		}
 		// 进程数量
 		$webserver->count = Config::get('Core.count');

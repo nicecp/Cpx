@@ -1,13 +1,13 @@
 <?php
 namespace Controller;
 
-use \Cpx\BaseController;
+use \Framework\Cpx;
 
-class Index extends BaseController {
+class Index extends Cpx {
 	public function index()
 	{
-		// $this->request->getParams;
-		// $list = $this->db('write')->select('*')->from('woman')->query();
+		$this->request->getParams;
+		$list = $this->db('write')->select('*')->from('woman')->query();
 		$list = array(
 			array('id'=>23, 'name'=>'pengc','phone'=>1500),
 			array('id'=>24, 'name'=>'kaixiangz', 'phone'=>1600),

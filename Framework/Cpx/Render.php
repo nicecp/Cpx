@@ -1,13 +1,13 @@
 <?php
-namespace Cpx;
+namespace Framework\Cpx;
 
-use Cpx\Cpx;
-use Cpx\CpxException;
+use Framework\Cpx\Base;
+use Framework\Cpx\CpxException;
 
 /**
  * 渲染器
  */
-class Render extends BaseFrame {
+class Render extends Base {
 
 	/**
 	 * 模板路径
@@ -147,7 +147,7 @@ class Render extends BaseFrame {
 	protected static function regular()
 	{
 		if (empty(self::$regular)) {
-			foreach (Cpx::getConsts() as $key => $value) {
+			foreach (self::getConsts() as $key => $value) {
 				$const["/{$key}/"] = $value;
 			}
 			self::$regular = self::$pregPattern + $const;

@@ -1,7 +1,7 @@
 <?php
-namespace Cpx;
+namespace Framework\Cpx;
 
-class BaseFrame {
+class Base {
 	/**
 	 * 应用名称
 	 *

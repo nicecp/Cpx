@@ -1,6 +1,6 @@
 <?php
-use Cpx\Request;
-use Cpx\Router;
+use Framework\Cpx\Request;
+use Framework\Cpx\Router;
 
 // 路由
 Router::route(Request::instance());

@@ -1,12 +1,12 @@
 <?php
-namespace Cpx;
+namespace Framework\Common;
 
-use Cpx\Cpx;
+use Framework\Cpx\Base;
 /**
  * 调试器
  *
  */
-class Debug extends BaseFrame {
+class Debug extends Base {
 
 	/**
 	 * 调试信息

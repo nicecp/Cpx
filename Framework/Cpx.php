@@ -1,16 +1,17 @@
 <?php
-namespace Cpx;
+namespace Framework;
 
-use Cpx\Cpx;
-use Cpx\Config;
-use Cpx\Db;
-use Cpx\CpxException;
+use Framework\Service;
+use Framework\Common\Config;
+use Framework\Cpx\Db;
+use Framework\Cpx\CpxException;
+use Framework\Cpx\Render;
 use Workerman\Protocols\Http;
 
 /**
  * 框架基类
  */
-class BaseController {
+class Cpx {
 
 	/**
 	 * Request 请求
@@ -59,7 +60,7 @@ class BaseController {
 	{
 		$flag = $format ? JSON_PRETTY_PRINT : 0;
 		Http::header('Content-Type:application/json; charset=utf-8');
-		Http::end(json_encode(array('Frame' => Cpx::$appName, 'Version' => '0.0.1', 'Message' => $msg), JSON_PRETTY_PRINT).PHP_EOL);
+		Http::end(json_encode(array('Frame' => Service::$appName, 'Version' => '0.0.1', 'Message' => $msg), JSON_PRETTY_PRINT).PHP_EOL);
 	}
 
 	/**

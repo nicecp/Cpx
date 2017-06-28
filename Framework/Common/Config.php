@@ -1,7 +1,7 @@
 <?php
-namespace Cpx;
+namespace Framework\Common;
 
-use Cpx\CpxException;
+use Framework\Cpx\CpxException;
 
 class Config {
 

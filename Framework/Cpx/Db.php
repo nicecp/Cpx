@@ -1,8 +1,8 @@
 <?php
-namespace Cpx;
+namespace Framework\Cpx;
 
-use Cpx\Db\Mysql;
-use CpxException;
+use Framework\Library\Db\Mysql;
+use Framework\Cpx\CpxException;
 
 class Db {
 	/**

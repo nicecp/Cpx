@@ -1,7 +1,7 @@
 <?php
-namespace Cpx;
+namespace Framework\Cpx;
 
-use Cpx\CpxException;
+use Framework\Cpx\CpxException;
 
 class Cache {
 	/**

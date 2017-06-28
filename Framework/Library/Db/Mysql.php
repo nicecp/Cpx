@@ -1,7 +1,7 @@
 <?php
-namespace Cpx\Db;
+namespace Framework\Library\Db;
 
-use Cpx\CpxException;
+use Framework\Cpx\CpxException;
 use \PDO;
 use \PDOException;
 

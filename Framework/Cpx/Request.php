@@ -1,5 +1,5 @@
 <?php
-namespace Cpx;
+namespace Framework\Cpx;
 
 class Request {
 

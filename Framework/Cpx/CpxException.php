@@ -1,4 +1,4 @@
 <?php
-namespace Cpx;
+namespace Framework\Cpx;
 
 class CpxException extends \Exception {}
