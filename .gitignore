@@ -1,3 +1,5 @@
 Conf/App.php
 Conf/Core.php
+Vendor/
+composer.lock
 cpx.log

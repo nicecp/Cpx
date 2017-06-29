@@ -1,13 +1,28 @@
 {
     "name"  : "nicecp/cpx",
-    "type"  : "Web Framework",
+    "type"  : "project",
     "keywords": ["web","framework","mvc"],
-    "homepage": "www.iyov.io",
+    "homepage": "http://www.iyov.io",
     "license" : "MIT",
+    "authors" : [
+    	{
+    		"name": "nicecp",
+            "email": "forward.nice.cp@gmail.com",
+            "homepage": "http://www.iyov.io",
+            "role": "Developer"
+    	}
+    ],
+    "support": {
+        "email": "forward.nice.cp@gmail.com",
+        "issues": "https://github.com/nicecp/cpx/issues",
+        "wiki": "https://github.com/nicecp/cpx/",
+        "source": "https://github.com/nicecp/px/"
+    },
     "config" : {
     	"vendor-dir" : "Vendor"
     },
     "require": {
+    	"php": ">=5.3",
         "walkor/workerman" : ">=3.0.0"
     },
     "autoload":{
