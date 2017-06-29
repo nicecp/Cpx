@@ -32,12 +32,18 @@ class Service extends Base {
 	 */
 	protected static function config()
 	{
+		// 设置当前工作路径
+		self::workingDir();
+
+		// 配置个资源命名空间
 		Config::setNameSpace('Conf');
 		Render::setTemplate(Config::get('Core.template'));
 		Render::setResource(Config::get('Core.resource'));
 		Cache::setSwitch(Config::get('Core.cache.switch'));
 		Cache::setCache(Config::get('Core.cache.path'));
 		Db::config(Config::get('App.db'));
+
+		// 初始化
 		self::appName(Config::get('Core.appName'));
 		self::consts();
 	}
@@ -62,29 +68,5 @@ class Service extends Base {
 		$webserver->count = Config::get('Core.count');
 
 		Worker::runAll();
-	}
-
-	/**
-	 * 设置或获取应用名称
-	 *
-	 * @param string $name
-	 */
-	public static function appName($name = '')
-	{
-		if (strlen($name)) {
-			self::$appName = $name;
-		}
-
-		return self::$appName;
-	}
-
-	/**
-	 * 初始化常量
-	 *
-	 * @return void
-	 */
-	public static function consts()
-	{
-		define('__PUBLIC__', Render::$resource);
 	}
 }
