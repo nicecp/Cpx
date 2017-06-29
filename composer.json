@@ -1,0 +1,20 @@
+{
+    "name"  : "workerman/json-rpc",
+    "type"  : "project",
+    "keywords": ["json","rpc"],
+    "homepage": "http://www.workerman.net",
+    "license" : "MIT",
+    "config" : {
+    	"vendor-dir" : "Vendor"
+    },
+    "require": {
+        "walkor/workerman" : ">=3.0.0"
+    },
+    "autoload":{
+    	"psr-4":{
+    		"Framework\\" : "Framework/",
+    		"Controller\\" : "Controller/",
+    		"Conf\\" : "Conf"
+    	}
+    }
+}
