@@ -14,20 +14,18 @@
 
 ### 安装
 
-> 环境要求 php>=5.4，扩展依赖具体参考workerman
-
-clone 仓库下来即可运行
+* 环境要求 php>=5.4，扩展依赖具体参考workerman
+> git clone 仓库
+> composer install
 
 ### 配置
 
-> Core 框架核心配置文件，App 项目配置文件
+* Core 框架核心配置文件，App 项目配置文件
 
-进入项目配置文件目录`Conf`
+> `cp App.php.example App.php`
 
-`cp App.php.example App.php`
-
-`cp Core.php.example Core.php`
+> `cp Core.php.example Core.php`
 
 ### 启动
 
-`php Bin/webserver.php start`
+> `php Bin/webserver.php start`
