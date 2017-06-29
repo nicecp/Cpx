@@ -1,8 +1,8 @@
 {
-    "name"  : "workerman/json-rpc",
-    "type"  : "project",
-    "keywords": ["json","rpc"],
-    "homepage": "http://www.workerman.net",
+    "name"  : "nicecp/cpx",
+    "type"  : "Web Framework",
+    "keywords": ["web","framework","mvc"],
+    "homepage": "www.iyov.io",
     "license" : "MIT",
     "config" : {
     	"vendor-dir" : "Vendor"
