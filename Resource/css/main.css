@@ -19,3 +19,7 @@
 	text-align: center;
 	color: #ff9400;
 }
+#debug {
+	width: 65%;
+	margin: 50px auto;
+}
