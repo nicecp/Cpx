@@ -20,4 +20,13 @@ class App {
 			)
 		);
 
+	/**
+	 * 自定义常量
+	 *
+	 * @var array
+	 */
+	public $const = array(
+		'__SEM__' => '/Resource/semantic',
+		);
+
 }
