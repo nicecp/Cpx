@@ -12,11 +12,21 @@
 - 读写分离
 - 高速缓存
 
-### 安装
+### 依赖
 
-* 环境要求 php>=5.4，扩展依赖具体参考workerman
-> git clone 仓库
+* php >= 5.4
+* workerman
+* semantic-ui
+
+### 安装
+Step 1. composer依赖
+> clone
 > composer install
+
+Step 2. semantic-ui
+* 请参照[官网](http://www.semantic-ui.cn/introduction/getting-started.html)安装
+> cp -r semantic Resource 
+**可拷贝至任意目录，在`Conf/App.php`指定快捷路径即可**
 
 ### 配置
 
