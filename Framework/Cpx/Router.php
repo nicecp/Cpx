@@ -2,6 +2,7 @@
 namespace Framework\Cpx;
 
 use Framework\Cpx\Base;
+use Framework\Common\Debug;
 /**
  * 路由器
  */
@@ -42,7 +43,11 @@ class Router extends Base {
 		if (class_exists($className) || method_exists($className, $method)) {
 			$controller = new $className($request, $className, $method);
 			if (is_callable(array($controller, $method))) {
-				$controller->$method();
+				try {
+					$controller->$method();
+				} catch (\Exception $exp) {
+					$controller->show('common/debug', Debug::stackTrace($exp->getMessage(), $exp->getTrace()));
+				}
 			} else {
 				Debug::debug("方法不可访问：{$className}::{$method}");
 			}

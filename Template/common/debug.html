@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="__SEM__/dist/semantic.min.css">
+	<link rel="stylesheet" type="text/css" href="__PUBLIC__/css/main.css">
+	<script src="__PUBLIC__/js/jquery.js"></script>
+	<script src="__SEM__/dist/semantic.min.js"></script>
+	<title>Error</title>
+</head>
+<body>
+
+<div id="debug">
+	<div class="ui negative message">
+		<div class="header"> {{$trace[0]}} </div>
+	</div>
+	<div class="ui floating message">
+		{{foreach $trace as $k => $v}}
+			{{if $k >=1 }}
+				<p>{{$v}}</p>
+			{{/if}}
+		{{/foreach}}
+	</div>
+</div>
+</body>
+</html>
