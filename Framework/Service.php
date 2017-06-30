@@ -45,7 +45,7 @@ class Service extends Base {
 
 		// 初始化
 		self::appName(Config::get('Core.appName'));
-		self::consts();
+		self::consts(Config::get('App.const'));
 	}
 
 	/**
