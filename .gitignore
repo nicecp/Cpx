@@ -1,5 +1,7 @@
 Conf/App.php
 Conf/Core.php
+Resource/
 Vendor/
+Bin/*.pid
 composer.lock
 cpx.log
