@@ -88,7 +88,7 @@ class Render extends Base {
 	{
 		$path = '';
 		if (!Cache::status()) { // 没有开启缓存
-			$html = file_get_contents($header) . self::getHtml($body) . file_get_contents($footer);
+			$html = (strlen($header) ? file_get_contents($header) : $header) . self::getHtml($body) . (strlen($footer) ? file_get_contents($footer) : $footer);
 			$path = Cache::tmpCache($body, $html);
 		}
 		else if (!Cache::exists($file)) { // 已开启缓存但缓存文件不存在
