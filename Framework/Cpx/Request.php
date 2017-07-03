@@ -53,7 +53,8 @@ class Request {
 	public function __construct()
 	{
 		$this->host = $_SERVER['HTTP_HOST'];
-		$this->path = array_shift(explode('?', $_SERVER['REQUEST_URI']));
+		$temp = explode('?', $_SERVER['REQUEST_URI']);
+		$this->path = array_shift($temp);
 		$this->method = strtoupper($_SERVER['REQUEST_METHOD']);
 
 		switch ($this->method) {
