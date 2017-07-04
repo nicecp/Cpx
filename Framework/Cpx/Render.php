@@ -132,7 +132,8 @@ class Render extends Base {
 	 */
 	protected static function pregReplace($html = '')
 	{
-		array_walk(@self::regular(), function($replace, $preg) use (&$html) {
+		$regular = self::regular();
+		array_walk($regular, function($replace, $preg) use (&$html) {
 			$html = preg_replace($preg, $replace, $html);
 		});
 
