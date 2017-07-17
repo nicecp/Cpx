@@ -25,6 +25,13 @@ class Request {
 	public $path = "";
 
 	/**
+	 * 请求参数
+	 *
+	 * @var array
+	 */
+	public $params = array();
+
+	/**
 	 * GET请求参数
 	 *
 	 * @var array
@@ -58,11 +65,11 @@ class Request {
 
 		switch ($this->method) {
 			case 'GET':
-				$this->queryParams = $_GET;
+				$this->params = $this->queryParams = $_GET;
 				break;
 			
 			case 'POST':
-				$this->postParams = $_POST;
+				$this->params = $this->postParams = $_POST;
 				break;
 
 			default:
